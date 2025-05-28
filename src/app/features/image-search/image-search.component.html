@@ -1,8 +1,9 @@
 <ng-container *ngIf="$images | async as images; else loading">
+  <app-input-search [placeholder]="'Search...'" (change)="onSearch($event)" [debounceTime]="500"/>
   <app-image-gallery>
     <app-image-card *ngFor="let image of images.items" [image]="image"></app-image-card>
   </app-image-gallery>
 </ng-container>
 <ng-template #loading>
-  <p>Loading or no data available</p>
+  <p>No data available</p>
 </ng-template>
