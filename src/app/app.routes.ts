@@ -5,5 +5,14 @@ export const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        loadComponent: () =>
+          import('./features/image-search/image-search.component').then(
+            (c) => c.ImageSearchComponent
+          ),
+      },
+    ],
   },
 ];

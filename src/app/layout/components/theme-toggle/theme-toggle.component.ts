@@ -1,4 +1,4 @@
-import { Component, Output, signal, EventEmitter } from '@angular/core';
+import { Component, Output, signal, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { THEME } from '../../models/theme';
@@ -9,6 +9,7 @@ import { THEME } from '../../models/theme';
   templateUrl: './theme-toggle.component.html',
   styleUrl: './theme-toggle.component.scss',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ThemeToggleComponent {
   @Output() change = new EventEmitter<THEME>();
