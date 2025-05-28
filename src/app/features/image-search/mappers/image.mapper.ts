@@ -1,5 +1,5 @@
 import { UnsplashImage } from '../../../infra/repositories/unplash/models/unsplash-image';
-import { Image } from '../models/image.model';
+import { Image } from '../../../domain/images/models/image.model';
 
 export function mapRepositoryToDomainImage(dto: UnsplashImage): Image {
   return {

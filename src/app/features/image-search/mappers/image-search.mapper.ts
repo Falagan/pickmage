@@ -1,5 +1,5 @@
 import { UnsplashSearchParams } from '../../../infra/repositories/unplash/models/unsplash-searh-params';
-import { ImageSearch } from '../models/image-search.model';
+import { ImageSearch } from '../../../domain/images/models/image-search.model';
 
 export function mapDomainImageSearchToRepository(
   params: ImageSearch

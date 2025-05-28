@@ -1,6 +1,6 @@
 import { UnsplashApiResponsePaginated } from '../../../infra/repositories/unplash/models/unsplash-api-response';
 import { UnsplashImage } from '../../../infra/repositories/unplash/models/unsplash-image';
-import { ImageList } from '../models/image-list.model';
+import { ImageList } from '../../../domain/images/models/image-list.model';
 import { mapRepositoryToDomainImage } from './image.mapper';
 
 export function mapRepositoryToDomainImageList(
